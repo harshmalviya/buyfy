@@ -5,6 +5,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import SearchBox from './SearchBox';
 import { logout } from '../actions/userActions';
 import { Route } from 'react-router-dom';
+import Logo from './Logo';
 const Header = () => {
   const dispatch = useDispatch();
   const userLogin = useSelector((state) => state.userLogin);
@@ -19,7 +20,9 @@ const Header = () => {
       <Navbar bg="dark" variant="dark" expand="lg" collapseOnSelect>
         <Container>
           <LinkContainer to="/">
-            <Navbar.Brand>Buyfy</Navbar.Brand>
+            <Navbar.Brand>
+              <Logo />
+            </Navbar.Brand>
           </LinkContainer>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">

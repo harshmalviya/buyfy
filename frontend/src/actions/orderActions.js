@@ -125,7 +125,7 @@ export const deliverOrder = (order) => async (dispatch, getState) => {
       }
     };
 
-    await axios.put(`/api/orders/${order._id}/deliver`, config);
+    await axios.put(`/api/orders/${order._id}/deliver`, order, config);
 
     dispatch({ type: ORDER_DELIVER_SUCCESS });
   } catch (error) {
